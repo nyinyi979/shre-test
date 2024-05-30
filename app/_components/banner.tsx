@@ -9,7 +9,7 @@ export default function Banner(){
 	let path = usePathname();
   	return(
     	<div className={styles.bannerContainer}>
-    	  	<Image alt="logo" src={Logo} priority/>
+    	  	<Link href={"/"}><Image alt="logo" src={Logo} priority/></Link>
 			<div className={styles.rightContainer}>
 				<Link 
 					href={"/client"}

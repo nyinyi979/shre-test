@@ -9,21 +9,29 @@ export default function HowItWorks(){
         <div className={styles.container}>
             <h1 className={styles.heading}>How it works</h1>
             <div className={styles.imgContainer}>
-                <div className={styles.img}>
+                <div className={styles.eachImg}>
                     <p>Firstly attach NFC</p>
-                    <Image className={styles.img} src={Process1} alt="how it works 1"/>
+                    <div className={styles.img}>
+                        <Image className={styles.img} src={Process1} alt="how it works 1"/>
+                    </div>
                 </div>
-                <div className={styles.img}>
+                <div className={styles.eachImg}>
                     <p>App notification</p>
-                    <Image className={styles.img} src={Process2} alt="how it works 2"/>
+                    <div className={styles.img}>
+                        <Image className={styles.img} src={Process2} alt="how it works 2"/>
+                    </div>
                 </div>
-                <div className={styles.img}>
+                <div className={styles.eachImg}>
                     <p>Viewing details</p>
-                    <Image className={styles.img} src={Process3} alt="how it works 3"/>
+                    <div className={styles.img}>
+                        <Image className={styles.img} src={Process3} alt="how it works 3"/>
+                    </div>
                 </div>
-                <div className={styles.img}>
+                <div className={styles.eachImg}>
                     <p>Customization</p>
-                    <Image className={styles.img} src={Process4} alt="how it works 4"/>
+                    <div className={styles.img}>
+                        <Image className={styles.img} src={Process4} alt="how it works 4"/>
+                    </div>
                 </div>
             </div>
         </div>

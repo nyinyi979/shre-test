@@ -14,3 +14,9 @@ body{
 a{
   text-decoration: none;
 }
+.home{
+  margin-top: 150px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+}

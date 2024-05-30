@@ -6,6 +6,16 @@
     display: flex;
     flex-direction: column;
 }
+.eachImg{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.eachImg > p{
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+}
 .img{
     display: flex;
     flex-direction: column;
@@ -41,12 +51,8 @@
     .imgContainer{
         flex-direction: row;
         justify-content: space-evenly;
-        .img{
-            width: 20%;
-            margin: 0;
-        }
-        .img > img{
-            width: 100%;
-        }
+    }
+    .img > img{
+        width: 100%;
     }
 }

@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import SignatureProducts from "../client/_components/signatureProducts";
 import CostEffective from "./_components/costEffective";
 import SeamlessCRM from "./_components/crm";
@@ -6,7 +7,6 @@ import HowItWorks from "./_components/howItWorks";
 import LeadToDeal from "./_components/leadToDeal";
 import Plan from "./_components/plan";
 import WasteLess from "./_components/wasteLess";
-
 export default function(){
     return(
         <>
@@ -20,4 +20,9 @@ export default function(){
             <SignatureProducts />
         </>
     )
+}
+
+export const metadata:Metadata = {
+    title: "Products",
+    description: "SHREF Products"
 }

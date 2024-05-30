@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import ClientHeader from "./_components/clientHeader";
 import ClientLegend from "./_components/clientLegend";
 import FAQs from "./_components/faq";
@@ -11,10 +12,14 @@ export default function Client(){
             <ClientHeader />
             <ClientLegend />
             <SignatureProducts />
-            
             <GetStarted />
             <Features />
             <FAQs />
         </>
     )
+}
+
+export const metadata:Metadata = {
+    title: "Clients",
+    description: "SHREF Client"
 }
