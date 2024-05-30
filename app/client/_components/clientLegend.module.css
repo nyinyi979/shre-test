@@ -5,6 +5,9 @@
     justify-content: center;
     text-align: center;
 }
+.heading{
+    text-align: center;
+}
 .video{
     width: 100%;
     height: auto;
@@ -39,6 +42,9 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 10px;
+    }
+    .heading{
+        text-align: left;
     }
     .container p{
         text-align: justify;

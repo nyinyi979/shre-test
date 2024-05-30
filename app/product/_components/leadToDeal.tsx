@@ -4,9 +4,9 @@ import Contact from "../../_img_vid/contact.jpeg"
 export default function LeadToDeal(){
     return(
         <div className={styles.container}>
-            <Image className={styles.img1} src={Contact} alt="lead to deal contact"/>
             <div>
                 <h1 className={styles.heading}>From Lead to Deal<sup>TM</sup></h1>
+                <Image className={styles.img1} src={Contact} alt="lead to deal contact"/>
                 <p>
                     Impress everyone you meet with the <br />
                     quickest and most effective way to share <br />

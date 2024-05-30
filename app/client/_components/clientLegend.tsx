@@ -4,7 +4,7 @@ export default function ClientLegend(){
         <div className={styles.container}>
             <video className={styles.video} src="./hero.mp4" autoPlay loop/>
             <div>
-                <h1>Share anything, with a tap or scan!</h1>
+                <h1 className={styles.heading}>Share anything, with a tap or scan!</h1>
                 <p>
                     Impress everyone you meet with the 
                     quickest and most effective way to share 

@@ -4,10 +4,10 @@ import Digital from "../../_img_vid/digital.jpeg"
 export default function DigitalBusiness(){
     return(
         <div className={styles.container}>
-            <Image className={styles.img1} src={Digital} alt="digtal business"/>
             <Image className={styles.img} src={Digital} alt="digtal business"/>
             <div>
                 <h1 className={styles.heading}>Digital Business Cards</h1>
+                <Image className={styles.img1} src={Digital} alt="digtal business"/>
                 <p>
                     Impress everyone you meet with the 
                     quickest and most effective way to share 

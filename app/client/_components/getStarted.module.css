@@ -1,5 +1,5 @@
 .container{
-    margin: 45px 80px;
+    margin: 80px 80px;
     background-image: url(/sixcircles.svg);
     background-position: left center;
     background-repeat: no-repeat;
@@ -136,7 +136,7 @@
     }
     .mainPlan{
         transform: scale(1.1);
-        box-shadow: 2px 2px 5px 2px var(--primary-color);
+        box-shadow: 2px 2px 20px 0px var(--primary-color);
     }
     .planIntro{
         text-align: left;

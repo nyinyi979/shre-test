@@ -6,6 +6,7 @@ export default function CostEffective(){
         <div className={styles.container}>
             <div>
                 <h1 className={styles.heading}>The cost-effective networking solution</h1>
+                <Image className={styles.img1} src={Cost} alt="Cost effective"/>
                 <p>
                     Impress everyone you meet with the 
                     quickest and most effective way to share 
@@ -16,7 +17,7 @@ export default function CostEffective(){
                     Get Started
                 </a>
             </div>
-            <Image className={styles.img} src={Cost} alt="digtal business"/>
+            <Image className={styles.img} src={Cost} alt="Cost effective"/>
         </div>
     )
 }
