@@ -1,0 +1,16 @@
+:root{
+  --primary-color: #6D3DF5;
+  --primary-hover: #6539df;
+  --light-gray: #dfdfdf;
+  --black: #000000;
+  --white: #ffffff;
+}
+*{box-sizing: border-box;}
+body{
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+a{
+  text-decoration: none;
+}

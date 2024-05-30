@@ -1,0 +1,49 @@
+.container{
+    margin: 80px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.video{
+    width: 100%;
+    height: auto;
+    display: none;
+}
+.container p {
+    padding-top: 10px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+}
+.btn{
+    display: block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 20px;
+    padding: 12px 15px;
+    margin: 40px auto;
+    border-radius: 30px;
+    width: fit-content;
+    transition: background-color .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.btn:hover{
+    background-color: var(--primary-hover);
+}
+@media screen and (min-width:768px) {
+    .video{
+        display: block;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    .container p{
+        text-align: justify;
+    }
+    .btn{
+        margin: 40px 10px;
+    }
+}

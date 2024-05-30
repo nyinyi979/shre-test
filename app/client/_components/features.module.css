@@ -1,0 +1,114 @@
+.container{
+    margin: 100px 10px;
+}
+.heading{
+    text-align: center;
+    font-weight: 600;
+    font-size: 36px;
+    color: var(--primary-color)
+}
+.heading + p{
+    text-align: center;
+    color: gray;
+    margin: 50px 0;
+}
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    } to{
+        opacity: 1;
+    }
+}
+.featureContainer{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 3fr;
+    gap: 30px;
+}
+.leftSide, .rightSide{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.rightSide img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.rightSide{
+    height: 500px;
+    opacity: 1;
+    margin-top: 20px;
+    box-shadow: 1px 1px 5px 1px var(--light-gray);
+    padding: 10px;
+    border-radius: 10px;
+    transition: opacity .3s ease-in-out;
+    animation: fadeIn .3s ease-in-out;
+}
+.rightSide > p{
+    height: 200px;
+    line-height: 30px;
+}
+.rightSide h2{
+    text-align: center;
+    font-weight: 700;
+    font-size: 28px;
+}
+.button, .selectedBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    background-color: transparent;
+    width: 100%;
+    height: 20%;
+    border: 0;
+    cursor: pointer;
+    font-weight: 600;
+}
+.selectedBtn{
+    color: var(--white);
+    transition: color .3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.focusedEle{
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    top: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    z-index: -1;
+    transition: top .3s cubic-bezier(0.215, 0.610, 0.355, 1);
+    border-radius: 20px;
+}
+.focusedEle::after {
+    content: '';
+    position: absolute;
+    top: 30%;
+    right: -20px;
+    width: 0; 
+    height: 0; 
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid var(--primary-color);
+    transition: top .3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+@media screen and (min-width:768px) {
+    .container{
+        margin: 100px 100px;
+    }
+    .button, .selectedBtn {
+        font-size: 20px;
+    }
+    .featureContainer {
+        gap: 40px;
+    }
+    .rightSide img{
+        height: 400px;
+    }
+    .rightSide{
+        height: 550px;
+    }
+}

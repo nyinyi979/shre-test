@@ -1,0 +1,42 @@
+.bannerContainer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    padding: 30px;
+    width: 100%;
+    box-shadow: 2px 2px 5px 2px var(--light-gray);
+    align-items: center;
+    background-color: white;
+    z-index: 100;
+}
+.rightContainer{
+    margin-left: auto;
+}
+.link, .activeLink{
+    padding: 12px 10px;
+    margin: 0px 10px;
+    border-radius: 20px;
+    font-weight: 700;
+    outline: none;
+    border: none;
+}
+.link{
+    color: var(--black);
+    background-color: transparent;
+    transition: color .4s cubic-bezier(0.075, 0.82, 0.165, 1), background-color .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.activeLink{
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+.link:hover{
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+@media screen and (min-width:1024px) {
+    .bannerContainer{
+        padding: 30px 100px;
+    }
+}
+

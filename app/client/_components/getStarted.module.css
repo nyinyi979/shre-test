@@ -1,0 +1,156 @@
+.container{
+    margin: 45px 80px;
+    background-image: url(/sixcircles.svg);
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
+.heading, .planHeading{
+    font-weight: 600;
+    font-size: 36px;
+    text-align: center;
+}
+.planHeading{
+    font-size: 48px;
+    line-height: 0;
+}
+.planIntro{
+    text-align: center;
+}
+.video{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+.planContainer{
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    align-items: center;
+    justify-content: center;
+}
+.plansContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.btn{
+    display: block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 20px;
+    padding: 20px 35px;
+    border-radius: 30px;
+    margin: 40px 10px;
+    width: fit-content;
+}
+.plan, .mainPlan{
+    display: flex;
+    width: 280px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 10px 10px 10px;
+    border-radius: 10px;
+    line-height: 0;
+    background-color: #f2f2f2;
+    color: var(--black);
+    z-index: 1;
+}
+.plan{
+    border: 1px solid var(--light-gray);
+    transform: scale(.95);
+}
+.mainPlan{
+    color: var(--white);
+    background-color: var(--primary-color);
+    box-shadow: none;
+    transform: scale(1);
+    z-index: 3;
+}
+.otherPlanBtn, .primaryBtn{
+    font-weight: 600;
+    border-radius: 30px;
+    margin: 20px 10px;
+    width: fit-content;
+    outline: none;
+    border: none;
+}
+.otherPlanBtn{
+    font-size: 12px;
+    padding: 15px 50px;
+    color: gray;
+    border: 1px solid gray;
+}
+.primaryBtn{
+    font-size: 16px;
+    color: var(--primary-color);
+    background-color: var(--white);
+    cursor: pointer;
+    transition: background-color .4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    padding: 12px 15px;
+}
+.primaryBtn:hover{
+    background-color: var(--light-gray);
+}
+.price{
+    font-weight: 600;
+    font-size: 28px;
+}
+.price + sub{
+    font-weight: 600;
+}
+.pckName, .pckHead{
+    font-weight: 600;
+    font-size: 18px;
+}
+.pckHead{
+    margin-top: 50px;
+}
+.p{
+    line-height: 24px;
+    text-align: center;
+}
+@media screen and (min-width:768px) {
+    .plan, .mainPlan{
+        width: 350px;
+    }
+    
+}
+@media screen and (min-width:1024px) {
+    .video{
+        width: 75%;
+    }
+    .plan, .mainPlan{
+        width: 280px;
+    }
+    .plansContainer{
+        flex-direction: row;
+    }
+    .mainPlan{
+        transform: scale(1.1);
+        box-shadow: 2px 2px 5px 2px var(--primary-color);
+    }
+    .planIntro{
+        text-align: left;
+    }
+}
+@media screen and (min-width: 1400px) {
+    .planContainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .btn{
+        margin: 40px 0px;
+    }
+    .heading{
+        text-align: center;
+    }
+    .planHeading{
+        text-align: left;
+    }
+}
