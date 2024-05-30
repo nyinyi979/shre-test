@@ -9,10 +9,10 @@ export default function SeamlessCRM(){
             <div>
                 <h1>Seamless CRM Integrations</h1>
                 <p>
-                    Impress everyone you meet with the <br />
-                    quickest and most effective way to share <br />
-                    contact details, social media links, and more! <br />
-                    Designed for both individuals and teams<br />
+                    Impress everyone you meet with the 
+                    quickest and most effective way to share 
+                    contact details, social media links, and more! 
+                    Designed for both individuals and teams
                 </p>
                 <a href="" className={styles.btn}>
                     Get Started

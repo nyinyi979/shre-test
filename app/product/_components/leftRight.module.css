@@ -65,6 +65,9 @@
         padding: 60px 100px;
         gap: 30px
     }
+    .heading{
+        text-align: left;
+    }
     .heading + p{
         text-align: justify;
     }
