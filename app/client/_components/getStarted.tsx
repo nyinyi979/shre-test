@@ -7,7 +7,7 @@ export default function GetStarted(){
     return(
         <div className={styles.container}>
             <h1 className={styles.heading}>
-                Get started with SHRE in minutes
+                Get started with SHRE in <span>minutes</span>
             </h1>
             <video className={styles.video} src="./shre-vid2.mp4" controls/>
             <div className={styles.planContainer}>
