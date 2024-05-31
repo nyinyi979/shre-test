@@ -1,9 +1,9 @@
 import Image from "next/image"
 import styles from "./signatureProducts.module.css"
-import Metal from "../../_img_vid/metal-card.jpeg"
-import PVC from "../../_img_vid/pvc.jpeg"
-import PhoneTag from "../../_img_vid/phone.jpeg"
-import TableTalker from "../../_img_vid/table-talker.jpeg"
+import Metal from "@/app/_img_vid/metal-card.jpeg"
+import PVC from "@/app/_img_vid/pvc.jpeg"
+import PhoneTag from "@/app/_img_vid/phone.jpeg"
+import TableTalker from "@/app/_img_vid/table-talker.jpeg"
 export default function SignatureProducts(){
     return(
         <div className={styles.container}>

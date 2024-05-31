@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import SignatureProducts from "../client/_components/signatureProducts";
+import SignatureProducts from "../_components/signatureProducts";
 import CostEffective from "./_components/costEffective";
 import SeamlessCRM from "./_components/crm";
 import DigitalBusiness from "./_components/digitalBusiness";

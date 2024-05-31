@@ -60,7 +60,7 @@
     padding: 20px 10px 10px 10px;
     border-radius: 10px;
     line-height: 0;
-    background-color: #f2f2f2;
+    background-color: var(--white);
     color: var(--black);
     z-index: 1;
 }
@@ -86,8 +86,8 @@
 .otherPlanBtn{
     font-size: 12px;
     padding: 15px 50px;
-    color: gray;
-    border: 1px solid gray;
+    color: var(--gray);
+    border: 1px solid var(--gray);
 }
 .primaryBtn{
     font-size: 16px;

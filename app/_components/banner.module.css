@@ -7,7 +7,7 @@
     width: 100%;
     box-shadow: 2px 2px 5px 2px var(--light-gray);
     align-items: center;
-    background-color: white;
+    background-color: var(--white);
     z-index: 100;
 }
 .rightContainer{
@@ -24,16 +24,125 @@
 .link{
     color: var(--black);
     background-color: transparent;
-    transition: color .4s cubic-bezier(0.075, 0.82, 0.165, 1), background-color .5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .activeLink{
     background-color: var(--primary-color);
     color: var(--white);
+    cursor: pointer;
+}
+.link, .activeLink{
+    transition: color .4s cubic-bezier(0.075, 0.82, 0.165, 1), background-color .5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .link:hover{
     background-color: var(--primary-color);
     color: var(--white);
 }
+.activeLink:hover{
+    background-color: var(--primary-hover);
+}
+
+.menuBtn{
+    padding: 12px 15px;
+    margin: 0px 10px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    position: relative;
+}
+.menuBtn:hover{
+    background-color: var(--primary-color);
+}
+.shownMenu, .hiddenMenu{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 120vw;
+    height: 90vh;
+    border-radius: 0 0 0 700px;
+    background-color: var(--primary-color);
+    z-index: 100;
+    transform-origin: top right;
+}
+.stationaryMenu{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    z-index: -1;
+    background-color: var(--primary-color);
+}
+.stationaryLinkContainer{
+    display: none;
+}
+.openedLinkContainer, .closedLinkContainer{
+    height: 30;
+    overflow: hidden;
+    margin: 50px 0 50px 100px;
+    color: var(--white);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}   
+.shownMenu{
+    animation: scaleIn .5s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+}
+.hiddenMenu{
+    animation: scaleOut .5s cubic-bezier(0.075, 0.82, 0.165, 1) .5s forwards;
+}
+.openedLinkContainer a{
+    display: block;
+    transform: translateY(40px);
+}
+.closedLinkContainer a{
+    display: block;
+    transform: translateY(0px);
+}
+.openedLinkContainer:nth-child(1) a{
+    animation: slideUp .5s cubic-bezier(0.075, 0.82, 0.165, 1) .4s forwards;
+}
+.openedLinkContainer:nth-child(2) a{
+    animation: slideUp .5s cubic-bezier(0.075, 0.82, 0.165, 1) .6s forwards;
+}
+.closedLinkContainer:nth-child(1) a{
+    animation: slideDown .5s cubic-bezier(0.075, 0.82, 0.165, 1) .2s forwards;
+}
+.closedLinkContainer:nth-child(2) a{
+    animation: slideDown .5s cubic-bezier(0.075, 0.82, 0.165, 1) .1s forwards;
+}
+@keyframes scaleIn {
+    from{
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+    } 
+    to {
+        transform: translateY(0);
+    }
+}
+@keyframes scaleOut {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(0);
+    }
+}
+@keyframes slideDown {
+    from{
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(40px);
+    }
+}
+
 @media screen and (min-width:1024px) {
     .bannerContainer{
         padding: 30px 100px;

@@ -4,7 +4,7 @@ import ClientLegend from "./_components/clientLegend";
 import FAQs from "./_components/faq";
 import Features from "./_components/features";
 import GetStarted from "./_components/getStarted";
-import SignatureProducts from "./_components/signatureProducts";
+import SignatureProducts from "../_components/signatureProducts";
 import HowItWorks from "../_components/howItWorks";
 
 export default function Client(){
