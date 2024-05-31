@@ -35,11 +35,11 @@ export default function Banner(){
 				<button className={styles.menuBtn} onClick={openMenu}>
 					<Image src={MenuSvg} alt="Menu"/>
 				</button>
-				<div onClick={hideMenu} className={menuState==="shown"? styles.shownMenu : styles.hiddenMenu}>
-					<div className={menuState==="stationary"? styles.stationary : menuState==="shown"? styles.openedLinkContainer : styles.closedLinkContainer}>
+				<div className={menuState==="shown"? styles.shownMenu : styles.hiddenMenu}>
+					<div onClick={hideMenu} className={menuState==="stationary"? styles.stationary : menuState==="shown"? styles.openedLinkContainer : styles.closedLinkContainer}>
 						<Link href="/product">Product</Link>
 					</div>
-					<div className={menuState==="stationary"? styles.stationary : menuState==="shown"? styles.openedLinkContainer : styles.closedLinkContainer}>
+					<div onClick={hideMenu} className={menuState==="stationary"? styles.stationary : menuState==="shown"? styles.openedLinkContainer : styles.closedLinkContainer}>
 						<Link href="/client">Clients</Link>
 					</div>
 					<button className={menuState==="shown"? styles.closeBtn : styles.stationary} onClick={hideMenu}>
