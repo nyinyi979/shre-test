@@ -46,8 +46,17 @@
     height: 100%;
     object-fit: cover;
     transform: scale(1) rotate(0);
+    -o-transform: scale(1) rotate(0);
+    -moz-transform: scale(1) rotate(0);
+    -webkit-transform: scale(1) rotate(0);
     transition: transform .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -o-transition: transform .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -webkit-transition: transform .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -moz-transition: transform .5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .imgContainer:hover img{
     transform: scale(1.4) rotate(-15deg);
+    -o-transform: scale(1.4) rotate(-15deg);
+    -moz-transform: scale(1.4) rotate(-15deg);
+    -webkit-transform: scale(1.4) rotate(-15deg);
 }

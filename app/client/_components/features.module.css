@@ -49,6 +49,9 @@
     box-shadow: 1px 1px 5px 1px var(--light-gray);
     padding: 10px;
     transition: opacity .3s ease-in-out;
+    -o-transition: opacity .3s ease-in-out;
+    -moz-transition: opacity .3s ease-in-out;
+    -webkit-transition: opacity .3s ease-in-out;
     animation: fadeIn .3s ease-in-out;
 }
 .rightSide > p{

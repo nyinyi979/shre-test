@@ -12,6 +12,9 @@
 }
 .opened, .closed{
     transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -o-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -moz-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .closed{
     max-height: 0rem;
@@ -41,9 +44,15 @@
 }
 .openedArrow{
     transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
 }
 .closedArrow{
     transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
 }
 
 @media screen and (min-width:768px) {

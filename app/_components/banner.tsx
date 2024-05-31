@@ -1,19 +1,21 @@
 "use client"
+import React from "react"
 import Image from "next/image"
 import Logo from "@/app/_img_vid/logo-violet.svg"
 import styles from "./banner.module.css"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import React from "react"
+import MenuSvg from "@/app/_img_vid/menu.svg"
 export default function Banner(){
 	let path = usePathname();
-	// const [menuState, setMenuState] = React.useState<"hidden"|"shown"|"stationary">("stationary");
-	// const openMenu = () =>{
-	// 	setMenuState("shown");
-	// }
-	// const hideMenu = () =>{
-	// 	setMenuState("hidden")
-	// }
+	// stationary is required for first stage hidden
+	const [menuState, setMenuState] = React.useState<"hidden"|"shown"|"stationary">("stationary");
+	const openMenu = () =>{
+		setMenuState("shown");
+	}
+	const hideMenu = () =>{
+		setMenuState("hidden")
+	}
   	return(
 		<div className={styles.bannerContainer}>
 			<Link href={"/"}><Image alt="logo" src={Logo} priority/></Link>
@@ -30,18 +32,20 @@ export default function Banner(){
 				>
 					PRODUCTS
 				</Link>
-				{/* still need changes */}
-				{/* <button className={styles.menuBtn} onClick={openMenu}>
-					=
-					<div onClick={hideMenu} className={menuState==="shown"? styles.shownMenu : styles.hiddenMenu}>
-						<div className={menuState==="shown"? styles.openedLinkContainer : styles.closedLinkContainer}>
-							<a href="">Product</a>
-						</div>
-						<div className={ menuState==="shown"? styles.openedLinkContainer : styles.closedLinkContainer}>
-							<a href="">Clients</a>
-						</div>
+				<button className={styles.menuBtn} onClick={openMenu}>
+					<Image src={MenuSvg} alt="Menu"/>
+				</button>
+				<div onClick={hideMenu} className={menuState==="shown"? styles.shownMenu : styles.hiddenMenu}>
+					<div className={menuState==="stationary"? styles.stationary : menuState==="shown"? styles.openedLinkContainer : styles.closedLinkContainer}>
+						<Link href="/product">Product</Link>
 					</div>
-				</button> */}
+					<div className={menuState==="stationary"? styles.stationary : menuState==="shown"? styles.openedLinkContainer : styles.closedLinkContainer}>
+						<Link href="/client">Clients</Link>
+					</div>
+					<button className={menuState==="shown"? styles.closeBtn : styles.stationary} onClick={hideMenu}>
+						x
+					</button>
+				</div>
 			</div>
 		</div>
   	)
