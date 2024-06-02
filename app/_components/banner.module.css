@@ -83,7 +83,8 @@
     background-color: var(--light-gray);
 }
 .closeBtn{
-    animation: scaleIn .5s cubic-bezier(0.075, 0.82, 0.165, 1) .5s forwards;
+    -webkit-animation: scaleIn .5s cubic-bezier(0.075, 0.82, 0.165, 1) .5s forwards;
+            animation: scaleIn .5s cubic-bezier(0.075, 0.82, 0.165, 1) .5s forwards;
 }
 .menuBtn:hover{
     background-color: var(--primary-hover);
@@ -124,6 +125,8 @@
 .openedLinkContainer , .closedLinkContainer{
     height: 30;
     overflow: hidden;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     margin: 0 55%;
     z-index: 22;
@@ -157,19 +160,31 @@
 } 
 .openedLinkContainer:nth-child(1) a{
     margin-top: 150px;
-    animation: slideUp .5s cubic-bezier(0.075, 0.82, 0.165, 1) .4s forwards;
+    -webkit-animation: slideUp .5s cubic-bezier(0.075, 0.82, 0.165, 1) .4s forwards;
+            animation: slideUp .5s cubic-bezier(0.075, 0.82, 0.165, 1) .4s forwards;
 }
 .openedLinkContainer:nth-child(2) a{
     margin-top: 50px;
-    animation: slideUp .5s cubic-bezier(0.075, 0.82, 0.165, 1) .3s forwards;
+    -webkit-animation: slideUp .5s cubic-bezier(0.075, 0.82, 0.165, 1) .3s forwards;
+            animation: slideUp .5s cubic-bezier(0.075, 0.82, 0.165, 1) .3s forwards;
 }
 .closedLinkContainer:nth-child(1) a{
     margin-top: 150px;
-    animation: slideDown .5s cubic-bezier(0.075, 0.82, 0.165, 1) .2s forwards;
+    -webkit-animation: slideDown .5s cubic-bezier(0.075, 0.82, 0.165, 1) .2s forwards;
+            animation: slideDown .5s cubic-bezier(0.075, 0.82, 0.165, 1) .2s forwards;
 }
 .closedLinkContainer:nth-child(2) a{
     margin-top: 50px;
-    animation: slideDown .5s cubic-bezier(0.075, 0.82, 0.165, 1) .1s forwards;
+    -webkit-animation: slideDown .5s cubic-bezier(0.075, 0.82, 0.165, 1) .1s forwards;
+            animation: slideDown .5s cubic-bezier(0.075, 0.82, 0.165, 1) .1s forwards;
+}
+@-webkit-keyframes scaleIn {
+    from{
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
 }
 @keyframes scaleIn {
     from{
@@ -177,6 +192,14 @@
     }
     to {
         transform: scale(1);
+    }
+}
+@-webkit-keyframes scaleOut {
+    from{
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0);
     }
 }
 @keyframes scaleOut {
@@ -187,12 +210,28 @@
         transform: scale(0);
     }
 }
+@-webkit-keyframes slideUp {
+    from {
+        transform: translateY(30px);
+    } 
+    to {
+        transform: translateY(0);
+    }
+}
 @keyframes slideUp {
     from {
         transform: translateY(30px);
     } 
     to {
         transform: translateY(0);
+    }
+}
+@-webkit-keyframes slideDown {
+    from{
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(40px);
     }
 }
 @keyframes slideDown {

@@ -42,7 +42,8 @@
     top: 0;
     left: 0;
     background-size: cover;
-    filter: brightness(.8);
+    -webkit-filter: brightness(.8);
+            filter: brightness(.8);
     z-index: -1;
 }
 .flexContainer > div:hover{

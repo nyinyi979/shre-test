@@ -28,6 +28,8 @@
     padding: 12px 15px;
     margin: 40px auto;
     border-radius: 30px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     transition: background-color .3s cubic-bezier(0.165, 0.84, 0.44, 1);
     -o-transition: background-color .3s cubic-bezier(0.165, 0.84, 0.44, 1);
